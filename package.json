@@ -1,0 +1,14 @@
+{
+  "name": "pipeline",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/titanmkb/pipeline-test.git",
+  "author": "Mangesh Kumar <mangesh.jbs@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "echo 'Building...'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
