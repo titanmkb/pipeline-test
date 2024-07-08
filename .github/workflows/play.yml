@@ -1,0 +1,39 @@
+name: Playground Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  http-request:
+    runs-on: self-hosted
+
+    steps:
+    #   - name: Configure AWS credentials
+    #     uses: aws-actions/configure-aws-credentials@v1
+    #     with:
+    #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #       aws-region: ${{ secrets.AWS_REGION }}
+
+      # - name: Get public IP
+      #   run: |
+      #     ip=$(curl -s https://api.ipify.org/?format=json | jq -r '.ip')
+      #     echo "ip=${ip}" >> $GITHUB_ENV
+
+      # - name: Whitelist IP in Security Group
+      #   run: |
+      #     security_group_id="sg-05b632597943839aa"
+      #     ip="${ip}/32"
+      #     aws ec2 authorize-security-group-ingress --group-id "$security_group_id" --protocol tcp --port 80 --cidr "$ip"
+
+      - name: Echo Success
+        run: |
+          echo "Runner Success"
+
+      # - name: Revoke IP from Security Group
+      #   run: |
+      #     security_group_id="sg-05b632597943839aa"
+      #     ip="${ip}/32"
+      #     aws ec2 revoke-security-group-ingress --group-id "$security_group_id" --protocol tcp --port 80 --cidr "$ip"
